@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Delete, Put, Body, Param, ConflictException, NotFoundException, HttpCode } from '@nestjs/common';
 import { CreateTaskDto } from 'src/dto/create-task.dto';
+import { UpdateTaskDto } from 'src/dto/update-task.dto';
 import { TasksService } from './tasks.service';
 
 @Controller('tasks')
@@ -46,7 +47,7 @@ export class TasksController {
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() body: CreateTaskDto) {
+  async update(@Param('id') id: string, @Body() body: UpdateTaskDto) {
     try {
       const task = await this.tasksService.update(id, body)
       return task
