@@ -45,6 +45,25 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Endpoints
+
+```bash
+# GET all tasks
+$ http://localhost:3000/api/tasks
+
+# GET one task
+$ http://localhost:3000/api/tasks/id
+
+# Create one task by POST METHOD
+$ http://localhost:3000/api/tasks
+
+# UPDATE one task by PUT METHOD
+$ http://localhost:3000/api/tasks/id
+
+# DELETE one task by DELETE METHOD
+$ http://localhost:3000/api/tasks/id
+```
+
 ## Test
 
 ```bash

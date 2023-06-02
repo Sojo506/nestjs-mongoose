@@ -13,6 +13,7 @@ export class TasksController {
   }
 
   @Get(':id')
+  // @Param allows to accept data from the fronted which comes by the params.
   async findOne(@Param('id') id: string) {
     try {
       const task = await this.tasksService.findOne(id)
@@ -25,6 +26,7 @@ export class TasksController {
   }
 
   @Post()
+  // @Body allows to accept data from the fronted which comes by the body.
   async create(@Body() body: CreateTaskDto) {
     try {
       return await this.tasksService.create(body)
@@ -36,7 +38,9 @@ export class TasksController {
   }
 
   @Delete(':id')
+  // HttpCode allows to set an automatically response when everything is ok and there is no content to return
   @HttpCode(204)
+  // @Param allows to accept data from the fronted which comes by the params.
   async delete(@Param('id') id: string) {
     try {
       const task = await this.tasksService.delete(id)
@@ -47,6 +51,7 @@ export class TasksController {
   }
 
   @Put(':id')
+  // @Param allows to accept data from the fronted which comes by the params.
   async update(@Param('id') id: string, @Body() body: UpdateTaskDto) {
     try {
       const task = await this.tasksService.update(id, body)
