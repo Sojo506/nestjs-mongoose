@@ -45,6 +45,16 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Instructions
+
+```bash
+# Objective
+$ This repo covers the basics of a CRUD.
+
+# What will you need?
+$ You have to create a DB called tasks by mongodb, and you will be ready to test the API
+```
+
 ## Endpoints
 
 ```bash
